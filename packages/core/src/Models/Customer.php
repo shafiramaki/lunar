@@ -45,6 +45,9 @@ class Customer extends BaseModel
      */
     protected $guarded = [];
 
+    protected $connection = 'central';
+    protected $table = 'customers';
+
     /**
      * {@inheritDoc}
      */
