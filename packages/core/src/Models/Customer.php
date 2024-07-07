@@ -45,8 +45,15 @@ class Customer extends BaseModel
      */
     protected $guarded = [];
 
-    protected $connection = 'central';
-    protected $table = 'customers';
+    public function getConnectionName()
+    {
+        return config('tenancy.database.central_connection');
+    }
+
+    public function getTableName()
+    {
+        return 'customers';
+    }
 
     /**
      * {@inheritDoc}
